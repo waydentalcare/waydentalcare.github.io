@@ -30,6 +30,7 @@
     font-weight:300;
     overflow-x:hidden;
   }
+  body.nav-open{overflow:hidden;}
   h1,h2,h3,.serif{
     font-family:'Cormorant Garamond', serif;
     font-weight:600;
@@ -146,8 +147,11 @@
   .btn-outline:hover{background:var(--cocoa);border-color:var(--cocoa);color:var(--white);}
   .btn svg{width:16px;height:16px;}
   .nav-cta{display:flex;align-items:center;gap:18px;}
-  .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
-  .menu-toggle span{width:26px;height:1.5px;background:var(--cocoa);}
+  .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;z-index:201;padding:8px;}
+  .menu-toggle span{width:26px;height:1.5px;background:var(--cocoa);transition:all .3s ease;}
+  .menu-toggle.open span:nth-child(1){transform:rotate(45deg) translate(8px, 8px);}
+  .menu-toggle.open span:nth-child(2){opacity:0;}
+  .menu-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(8px, -8px);}
 
   /* ---------- hero ---------- */
   .hero{
@@ -625,9 +629,14 @@
 
   /* ---------- responsive ---------- */
   @media (max-width: 980px){
-    nav{position:fixed;top:0;right:-100%;width:78%;max-width:340px;height:100vh;background:var(--ivory);flex-direction:column;padding:110px 40px;box-shadow:-10px 0 40px rgba(0,0,0,0.15);transition:right .4s ease;z-index:150;}
+    nav{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgba(250,246,239,0.95);backdrop-filter:blur(8px);flex-direction:column;padding:80px 32px 40px;box-shadow:-10px 0 40px rgba(0,0,0,0.08);transition:right .4s cubic-bezier(0.4, 0, 0.2, 1);z-index:150;overflow-y:auto;border-left:1px solid var(--line);}
+    nav::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0);transition:background .3s ease;z-index:-1;pointer-events:none;}
     nav.open{right:0;}
-    nav ul{flex-direction:column;gap:28px;}
+    nav.open::before{background:rgba(0,0,0,0.2);pointer-events:auto;}
+    nav ul{flex-direction:column;gap:12px;}
+    nav a{font-size:0.9rem;padding:12px 0;display:block;color:var(--cocoa);}
+    nav a::after{display:none;}
+    nav a:hover{color:var(--gold);}
     .nav-cta .btn-outline{display:none;}
     .menu-toggle{display:flex;}
     .hero-grid, .why-grid, .reserve-inner{grid-template-columns:1fr;}
@@ -644,6 +653,9 @@
     .hero{padding-top:130px;}
     .hero-stats{gap:28px;}
     .promo{text-align:center;}
+    nav{padding:70px 24px 40px;}
+    nav a{font-size:0.85rem;}
+    nav ul{gap:8px;}
   }
 </style>
 </head>
@@ -1030,8 +1042,17 @@ window.addEventListener('scroll', ()=>{
 /* ================= MOBILE NAV ================= */
 const menuToggle = document.getElementById('menuToggle');
 const siteNav = document.getElementById('siteNav');
-menuToggle.addEventListener('click', ()=> siteNav.classList.toggle('open'));
-siteNav.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> siteNav.classList.remove('open')));
+const body = document.body;
+menuToggle.addEventListener('click', ()=> {
+  siteNav.classList.toggle('open');
+  menuToggle.classList.toggle('open');
+  body.classList.toggle('nav-open');
+});
+siteNav.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> {
+  siteNav.classList.remove('open');
+  menuToggle.classList.remove('open');
+  body.classList.remove('nav-open');
+}));
 
 /* ================= REVEAL ON SCROLL ================= */
 const revealEls = document.querySelectorAll('.reveal');
