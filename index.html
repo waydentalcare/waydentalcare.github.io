@@ -659,7 +659,7 @@
       <ul>
         <li><a href="#beranda">Beranda</a></li>
         <li><a href="#layanan">Layanan</a></li>
-        <!-- <li><a href="#promo">Promo</a></li> -->
+        <li><a href="#promo">Promo</a></li>
         <li><a href="#testimoni">Testimoni</a></li>
         <li><a href="#reservasi">Reservasi</a></li>
       </ul>
@@ -711,21 +711,22 @@
 </section>
 
 <!-- ============ PROMO BANNER ============ -->
-<!-- <section class="promo" id="promo">
+<section class="promo" id="promo">
   <div class="container promo-inner">
     <div class="promo-left reveal">
-      <span class="promo-tag">✦ Promo Bulan Ini</span>
-      <h2>Whitening &amp; Scaling <span>Diskon 20%</span></h2>
-      <p>Dapatkan kombinasi perawatan pemutihan gigi profesional dan pembersihan karang gigi dengan harga spesial. Berlaku untuk reservasi bulan ini, kuota terbatas.</p>
+      <span class="promo-tag">✦ Promo Agustus Merderka</span>
+      <h2>Imunisasi Gigi Anak, <br> Scalling &amp; Bleaching <span>Diskon 17%</span></h2>
+      <p>Dapatkan kombinasi perawatan dengan harga spesial.</p>
+      <p class="promo-note">*S&amp;K berlaku untuk reservasi 17 - 31 Agustus 2026, hubungi klinik untuk info lengkap</p>
     </div>
     <div class="promo-right reveal">
-      <div class="promo-old">Rp 1.850.000</div>
-      <div class="promo-price"><sup>Rp</sup>1.480.000</div>
+      <!-- <div class="promo-old">Rp 1.850.000</div>
+      <div class="promo-price"><sup>Rp</sup>1.480.000</div> -->
       <a id="promoWaBtn" href="#" target="_blank" class="btn btn-gold" style="margin-top:20px;">Klaim Promo</a>
-      <div class="promo-note">*S&amp;K berlaku, hubungi klinik untuk info lengkap</div>
+      <!-- <div class="promo-note">*S&amp;K berlaku untuk reservasi 17 - 31 Agustus 2026, hubungi klinik untuk info lengkap</div> -->
     </div>
   </div>
-</section> -->
+</section>
 
 <!-- ============ SERVICES ============ -->
 <section class="services" id="layanan">
@@ -763,7 +764,7 @@
       </div>
       <div class="feat">
         <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
-        <div><h4>Dokter Berpengalaman</h4><p>Tim dokter gigi bersertifikat dengan pengalaman lebih dari 10 tahun.</p></div>
+        <div><h4>Dokter Berpengalaman</h4><p>Tim dokter gigi bersertifikat dengan pengalaman lebih dari 5 tahun.</p></div>
       </div>
       <div class="feat">
         <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
@@ -856,17 +857,21 @@
         <ul>
           <li><a href="#beranda">Beranda</a></li>
           <li><a href="#layanan">Layanan</a></li>
-          <!-- <li><a href="#promo">Promo</a></li> -->
+          <li><a href="#promo">Promo</a></li>
           <li><a href="#testimoni">Testimoni</a></li>
         </ul>
       </div>
       <div class="col">
         <h5>Layanan</h5>
         <ul>
-          <li><a href="#layanan">Pemutihan Gigi</a></li>
-          <li><a href="#layanan">Scaling</a></li>
-          <li><a href="#layanan">Veneer</a></li>
-          <li><a href="#layanan">Behel</a></li>
+          <li><a href="#layanan">Konsultasi</a></li>
+          <li><a href="#layanan">Scalling Gigi</a></li>
+          <li><a href="#layanan">Bleaching Gigi</a></li>
+          <li><a href="#layanan">Imunisasi Gigi Anak</a></li>
+          <li><a href="#layanan">Penambalan Gigi</a></li>
+          <li><a href="#layanan">Pencabutan Gigi</a></li>
+          <li><a href="#layanan">Kawat / Behel Gigi</a></li>
+          <li><a href="#layanan">Gigi Palsu</a></li>
         </ul>
       </div>
       <div class="col">
@@ -900,75 +905,61 @@ const WA_NUMBER = "6281272095454";
 
 const SERVICES = [
   {
-    name: "Konsultasi & Pemeriksaan",
+    name: "Konsultasi",
     desc: "Pemeriksaan menyeluruh kondisi gigi dan mulut bersama dokter gigi.",
-    price: "Rp 150.000",
-    note: "sekali kunjungan",
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>'
+    price: "Rp 50 rb",
+    note: "",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
   },
   {
-    name: "Scaling Gigi",
+    name: "Scalling Gigi",
     desc: "Pembersihan karang gigi profesional untuk gigi lebih bersih dan sehat.",
-    price: "Rp 350.000",
-    note: "per sesi",
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v6H4zM4 14h10v6H4z"/></svg>'
+    price: "Rp 250 rb - Rp 350 rb",
+    note: "",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
   },
   {
     name: "Bleaching Gigi",
-    desc: "Pembersihan karang gigi profesional untuk gigi lebih bersih dan sehat.",
-    price: "Rp 350.000",
-    note: "per sesi",
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v6H4zM4 14h10v6H4z"/></svg>'
+    desc: "Prosedur estetika menggunakan bahan kimia khusus untuk memutihkan dan mencerahkan warna asli gigi",
+    price: "Rp 1.5 jt",
+    note: "",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
   },
   {
     name: "Imunisasi Gigi Anak",
-    desc: "Pembersihan karang gigi profesional untuk gigi lebih bersih dan sehat.",
-    price: "Rp 350.000",
-    note: "per sesi",
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v6H4zM4 14h10v6H4z"/></svg>'
+    desc: "Mengembalikan mineral gigi yang hilang, serta melindungi gigi si kecil dari risiko karies atau gigi berlubang.",
+    price: "Rp 250 rb",
+    note: "",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
+  },
+  {
+    name: "Penambalan Gigi",
+    desc: "Prosedur medis untuk memperbaiki gigi yang berlubang, retak, atau patah dengan cara membersihkan bagian yang rusak lalu menutupnya menggunakan bahan khusus.",
+    price: "Rp 250 rb - Rp 400 rb",
+    note: "",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
+  },
+  {
+    name: "Pencambutan Gigi",
+    desc: "Mengeluarkan gigi dari tulang rahang karena rusak parah, infeksi, goyang, atau tumbuh tidak normal",
+    price: "Rp 250 rb - Rp 350 rb",
+    note: "",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
+  },
+  {
+    name: "Kawat / Behel Gigi",
+    desc: "Merapikan susunan gigi yang berjejal, renggang, atau memperbaiki gigitan rahang yang tidak normal",
+    price: "Rp 2.5 jt - Rp 3 jt",
+    note: "per rahang",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
+  },
+  {
+    name: "Gigi Palsu",
+    desc: "Mengganti gigi yang hilang dan jaringan gusi di sekitarnya",
+    price: "Rp 200 rb",
+    note: "per gigi",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
   }
-  // {
-  //   name: "Tambal Gigi",
-  //   desc: "Penambalan dengan bahan komposit estetik menyerupai warna gigi asli.",
-  //   price: "Rp 400rb – 600rb",
-  //   note: "per gigi",
-  //   icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/></svg>'
-  // },
-  // {
-  //   name: "Pemutihan Gigi",
-  //   desc: "Whitening profesional untuk hasil gigi lebih putih hingga beberapa tingkat.",
-  //   price: "Rp 1.500.000",
-  //   note: "per perawatan",
-  //   icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M5.6 5.6l2 2M3 12h3M5.6 18.4l2-2M12 18v3M16.4 16.4l2 2M18 12h3M16.4 7.6l2-2"/><circle cx="12" cy="12" r="4"/></svg>'
-  // },
-  // {
-  //   name: "Veneer Gigi",
-  //   desc: "Lapisan estetik untuk memperbaiki bentuk dan warna gigi secara permanen.",
-  //   price: "Mulai Rp 3.500.000",
-  //   note: "per gigi",
-  //   icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2 3 7h7l-5.5 4.5L18.5 21 12 16.8 5.5 21l2-7.5L2 9h7z"/></svg>'
-  // },
-  // {
-  //   name: "Behel / Kawat Gigi",
-  //   desc: "Perawatan ortodontik untuk merapikan susunan gigi secara bertahap.",
-  //   price: "Mulai Rp 8.000.000",
-  //   note: "paket lengkap",
-  //   icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M3 12c0 4 4 6 9 6s9-2 9-6M3 12c0-4 4-6 9-6s9 2 9 6"/></svg>'
-  // },
-  // {
-  //   name: "Cabut Gigi",
-  //   desc: "Pencabutan gigi dengan prosedur minim rasa sakit dan pemulihan cepat.",
-  //   price: "Rp 300rb – 500rb",
-  //   note: "per gigi",
-  //   icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 4.5 5 8.5c0 3 1.4 4.6 1.9 7.4.4 2.4.7 4.6 2 4.6 1.5 0 1.4-3.2 1.9-5 .3-1 .6-1.6 1.2-1.6s.9.6 1.2 1.6c.5 1.8.4 5 1.9 5 1.3 0 1.6-2.2 2-4.6.5-2.8 1.9-4.4 1.9-7.4C19 4.5 16 2 12 2Z"/></svg>'
-  // },
-  // {
-  //   name: "Perawatan Saluran Akar",
-  //   desc: "Perawatan akar gigi untuk mengatasi infeksi dan menyelamatkan gigi asli.",
-  //   price: "Mulai Rp 1.200.000",
-  //   note: "per gigi",
-  //   icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M5 8c0 4 3 5 7 5s7-1 7-5"/></svg>'
-  // }
 ];
 
 /* ================= RENDER SERVICES ================= */
@@ -1005,7 +996,7 @@ const defaultMsg = "Halo Way Dental Care, saya ingin melakukan reservasi.";
 // document.getElementById('navWaBtn').href = waLink(defaultMsg);
 document.getElementById('heroWaBtn').href = waLink(defaultMsg);
 document.getElementById('floatWaBtn').href = waLink(defaultMsg);
-// document.getElementById('promoWaBtn').href = waLink("Halo Aurea Dental Studio, saya ingin klaim promo Whitening & Scaling diskon 20%.");
+document.getElementById('promoWaBtn').href = waLink("Halo Way Dental Care, saya ingin klaim promo Scaling, Bleaching & Imunisasi Gigi Anak diskon 17%.");
 
 // per-service mini book buttons
 document.querySelectorAll('.mini-book').forEach(btn=>{
