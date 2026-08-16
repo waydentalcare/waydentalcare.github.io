@@ -911,6 +911,19 @@
 </a>
 
 <script>
+// Set minimum date for reservation date input
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, '0');
+const dd = String(today.getDate()).padStart(2, '0');
+
+const todayString = `${yyyy}-${mm}-${dd}`;
+
+const fDate = document.getElementById('fDate');
+
+fDate.min = todayString;
+fDate.value = todayString;
+
 /* ================= CONFIG ================= */
 // Ganti nomor WhatsApp di bawah ini dengan nomor klinik Anda (format: kode negara tanpa +, contoh 62812xxxxxxx)
 // const WA_NUMBER = "6281234567890";
