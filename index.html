@@ -835,7 +835,7 @@
       <p class="sub">Isi data singkat, lanjutkan konfirmasi via WhatsApp.</p>
       <div class="form-row">
         <label for="fName">Nama Lengkap</label>
-        <input type="text" id="fName" placeholder="Nama Anda">
+        <input type="text" id="fName" placeholder="Nama Anda" maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '').replace(/^\s+/, '').replace(/\s{2,}/g, ' ');">
       </div>
       <div class="form-row">
         <label for="fService">Pilih Layanan</label>
